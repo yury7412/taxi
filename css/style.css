@@ -1,0 +1,472 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Montserrat, sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+header{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.menu{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 0px;
+}
+
+.menu li a{
+    font-weight: 500;
+    font-size: 17px;
+    color: #000000;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social_media_header{
+    gap: 10px;
+    display: flex;
+}
+
+
+.hero{
+   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)) no-repeat center/cover, url(../img/bg.png) no-repeat center/cover;
+    padding: 135px 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+}
+
+
+.title{
+    font-weight: 700;
+    font-size: 50px;
+    color: #FFFFFF;
+}
+
+.prg_hero{
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    width: 680px;
+        line-height: 1.5;
+}
+
+
+.btn_hero{
+    padding: 13px 68px;
+    background: #DBFFF0;
+    border-radius: 40px;
+    display: block;
+    width: fit-content;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1F1F1F;
+}
+
+
+.section{
+    margin-top: 60px;
+}
+
+.section h2{
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center;
+    color: #079F3D;
+    margin-bottom: 40px;
+}
+
+.cards_wrapper .card img{
+    width: -webkit-fill-available;
+    height: 240px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.cards_wrapper .card p{
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 15px;
+}
+
+.cards_wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+
+
+
+
+.about_cont {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about_content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about_text {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 40px;
+}
+
+
+
+.about_image {
+    flex: 1;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.about_image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+/* Горизонтальный стиль для формы расчета такси */
+.сont_form {
+    background-color: #ffffff; /* Белый цвет блока */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+}
+
+.input_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: end;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.input-group:not(:has(.btn_dop)) {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e8ecef;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.8);
+    outline: none;
+    color: #2d3748;
+}
+
+
+
+.input-group input::placeholder {
+    color: #555555;
+    font-weight: 400;
+}
+
+
+
+
+/* Основная кнопка расчета */
+.btn_price_taxi {
+    background: #fd5e00;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 18px 30px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    letter-spacing: 0.5px;
+    margin-top: 30px;
+}
+
+
+
+/* Стили для выпадающего списка услуг */
+#services {
+    border: 2px solid #e8ecef;
+    border-radius: 12px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Кастомные стрелки для select */
+.input-group select {  
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 45px;
+}
+
+/* Иконки для полей ввода */
+.input-group:nth-child(1) input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23079F3D'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+    background-size: 22px;
+    padding-left: 45px;
+}
+
+.input-group:nth-child(2) input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23079F3D'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+    background-size: 22px;
+    padding-left: 45px;
+}
+
+
+
+
+
+
+
+/* Карта */
+#map {
+    display: none !important;
+}
+
+.result{
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+
+.details {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 10px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 5px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.details::after {
+  position: absolute;
+  right: 24px;
+  top: 15px;
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-right: 3px solid #009846;
+  border-bottom: 3px solid #009846;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  transition: .3s;
+}
+
+.details[open]::after {
+  transform: rotate(45deg);
+}
+
+.details[open] {
+  padding-bottom: 100px;
+}
+
+.details[open] .details__title {
+  margin-bottom: 32px;
+}
+
+.details__title {
+  background: #fff;
+  border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 24px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.details__title::-webkit-details-marker {
+  display: none;
+}
+
+.details__content {
+  padding: 0 25px;
+  font-size: 18px;
+  margin-bottom: -60px;
+}
+
+.details__content p:last-child {
+  margin-bottom: 0;
+}
+.details__content p:first-child {
+  margin-top: 0;
+}
+
+.details__content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+    gap: 20px;
+}
+
+.details__content a{
+    color: #000000;
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: fit-content;
+}
+
+
+
+/* Адаптивность для горизонтального расположения */
+@media (max-width: 768px) {
+    .input_wrapper {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .сont_form {
+        padding: 20px;
+    }
+    
+    .input-group input,
+    .input-group select {
+        padding: 14px 15px 14px 40px;
+    }
+    
+    .btn_price_taxi {
+        padding: 16px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .сont_form {
+        padding: 15px;
+        border-radius: 15px;
+    }
+    
+    .input-group input,
+    .input-group select {
+        padding: 12px 15px 12px 40px;
+        font-size: 14px;
+    }
+    
+    .btn_dop,
+    .btn_price_taxi {
+        font-size: 14px;
+        padding: 14px 20px;
+    }
+}
+
+/* Дополнительные улучшения для горизонтального стиля */
+.input-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #4a5568;
+    font-size: 14px;
+    display: block;
+}
+
+/* Плавное появление дополнительных услуг */
+#services {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#services[style*="display: block"] {
+    opacity: 1;
+    max-height: 300px;
+}
+
+
+/* Адаптивность */
+@media (max-width: 968px) {
+    .about_cont {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .about_content {
+        max-width: 100%;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature_item {
+        justify-content: center;
+        text-align: left;
+    }
+    
+    .section_title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about_section {
+        padding: 40px 0;
+    }
+    
+    .section_title {
+        font-size: 1.75rem;
+    }
+    
+    .about_text {
+        font-size: 1rem;
+    }
+}
